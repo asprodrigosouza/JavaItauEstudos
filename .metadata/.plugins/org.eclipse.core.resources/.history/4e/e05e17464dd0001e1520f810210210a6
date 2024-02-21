@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplicação Calculadora Spring</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width-device-width, initial-scale=1" />
+</head>
+	<body>
+		<h1>Calculadora Spring</h1>
+		
+		<form action="#" method="post" id="operacaoForm">
+			<label for="modelOperacoes">Selecione uma opção:</label>
+			<select id="modelOperacoes" name="modelOperacoes">
+				<option value="soma">Soma</option>
+				<option value="subtracao">Subtração</option>
+			</select>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+package br.com.rodrigo.CalculadorSpring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CalculadorSpringApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CalculadorSpringApplication.class, args);
+	}
+
+}

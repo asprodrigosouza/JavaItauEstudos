@@ -1,0 +1,8 @@
+package br.com.rodrigo.CalculadorSpring.resource;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class WebController {
+
+}

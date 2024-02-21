@@ -1,0 +1,11 @@
+package br.com.rss;
+
+import org.junit.Test;
+
+public class AppTeste {
+	
+	@Test
+	public void shouldAnswerWithTrue() {
+		assertTrue(true);
+	}
+}

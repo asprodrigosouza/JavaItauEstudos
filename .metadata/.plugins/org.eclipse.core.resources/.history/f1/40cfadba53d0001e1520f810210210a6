@@ -1,0 +1,43 @@
+package br.com.rodrigo.CalculadorSpring.resource;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class WebController {
+	
+	@GetMapping("/")
+	public String showForm(Model model) {
+		model.addAttribute("modelOperacoes", List.of("Soma", "Subtracao"));
+		return "form";
+	}
+	
+	@PostMapping("/")
+	public String handleFormSubmission(@RequestParam String modelOperacoes,
+									   @RequestParam String valor1,
+									   @RequestParam String valor2,
+									   Model model) {
+		if(modelOperacoes.isEmpty() || valor1.isEmpty() || valor2.isEmpty())
+			return null;
+		
+		String resposta = "";
+		
+		int res = 0;
+		
+		switch (modelOperacoes) {
+		case value: {
+			
+			yield type;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + modelOperacoes);
+		}
+		
+		return null;
+	} 
+}
