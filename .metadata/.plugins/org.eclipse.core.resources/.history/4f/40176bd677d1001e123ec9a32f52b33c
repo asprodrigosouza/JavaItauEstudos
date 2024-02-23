@@ -1,0 +1,43 @@
+package br.com.rodrigo.AppProdutos.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.com.rodrigo.AppProdutos.model.Produto;
+import br.com.rodrigo.AppProdutos.service.interfaces.ProdutoServiceInterface;
+
+@Service
+public class ProdutoService implements ProdutoServiceInterface{
+
+	@Override
+	public Produto save(Produto produto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Produto getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Produto> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Produto update(Produto produto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Produto produto) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

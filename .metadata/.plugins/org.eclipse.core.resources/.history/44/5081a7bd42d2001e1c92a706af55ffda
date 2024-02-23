@@ -1,0 +1,58 @@
+package br.com.rodrigo.AppProdutos.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import br.com.rodrigo.AppProdutos.model.Produto;
+import br.com.rodrigo.AppProdutos.repository.ProdutoRepository;
+import br.com.rodrigo.AppProdutos.service.interfaces.ProdutoServiceInterface;
+
+@Service
+public class ProdutoService implements ProdutoServiceInterface{
+
+	private ProdutoRepository produtoRepository;
+
+	@Autowired
+	public ProdutoService(ProdutoRepository produtoRepository) {
+		this.produtoRepository = produtoRepository;
+	}
+	
+	@Override
+	public Produto save(Produto produto) {
+		// TODO Auto-generated method stub
+		return produtoRepository.save(produto);
+	}
+
+	@Override
+	public Optional<Produto> getById(Long id) {
+		// TODO Auto-generated method stub
+		return produtoRepository.findById(id);
+	}
+
+	@Override
+	public List<Produto> getAll() {
+		// TODO Auto-generated method stub
+		return produtoRepository.findAll();
+	}
+
+	@Override
+	public Produto update(Produto produto) {
+		Optional<Produto> findProduto = produtoRepository.findById(produto.getId());
+		
+		if(findProduto.isPresent()) {
+			Produto updateProduto = findProduto.get();
+			updateProduto.setCodigoBarras(produto.getCodigoBarras());
+			updateProduto.setNome(produto.getNome());
+			updateProduto.setPreco(produto.getPreco());
+			return produtoRepository.save(updateProduto);
+		}
+		return produto;
+	}
+
+	@Override
+	public void delete(Produto produto) {
+		produtoRepository.deleteById(produto.getId());
+	}	
+}

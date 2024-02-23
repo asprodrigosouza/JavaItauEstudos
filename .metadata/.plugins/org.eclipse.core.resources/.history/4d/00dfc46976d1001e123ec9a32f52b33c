@@ -1,0 +1,5 @@
+package br.com.rodrigo.AppProdutos.service;
+
+public class EstoqueService {
+
+}

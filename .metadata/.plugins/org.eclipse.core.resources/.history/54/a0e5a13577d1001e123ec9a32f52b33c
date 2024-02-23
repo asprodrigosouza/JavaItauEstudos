@@ -1,0 +1,8 @@
+package br.com.rodrigo.AppProdutos.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ProdutoRepository {
+
+}

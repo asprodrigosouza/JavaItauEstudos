@@ -1,0 +1,16 @@
+package br.com.rodrigo.AppProdutos.service.interfaces;
+
+import br.com.rodrigo.AppProdutos.model.Produto;
+
+public interface ProdutoServiceInterface {
+
+	//Salvar produto
+	Produto save(Produto produto);
+	
+	//Recuperar produto
+	//Recuperar todos os produtos
+	//Atualizar produto
+	//Deletar produto
+	
+	
+}
