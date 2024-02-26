@@ -6,18 +6,10 @@ import java.util.Optional;
 import br.com.rodrigo.AppProdutos.model.Estoque;
 
 public interface EstoqueServiceInterface {
-	//Salvar produto
-		Estoque save(Estoque estoque);
-		
-		//Recuperar um produto
-		Optional<Estoque> getById(Long id);
-		
-		//Recuperar todos os produtos
-		List<Estoque> getAll();
-		
-		//Atualizar produto
-		Estoque update(Estoque estoque);
-		
-		//Deletar produto
-		void delete(Estoque estoque);
+	
+	Estoque save(Estoque estoque);
+	Optional<Estoque> getById(Long id);
+	List<Estoque> getAll();
+	Estoque update(Estoque estoque);
+	void delete(Long id);	
 }

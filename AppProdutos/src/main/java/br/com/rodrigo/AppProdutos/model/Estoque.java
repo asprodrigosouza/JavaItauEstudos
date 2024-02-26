@@ -13,8 +13,9 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "estoque")
+@Table(name="estoque")
 public class Estoque {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -26,18 +27,13 @@ public class Estoque {
 	@JoinColumn(name = "produto_id", referencedColumnName = "id")
 	private Produto produto;
 	
-	public Estoque() {}
+	public Estoque () {}
 
-	
-	
 	public Estoque(Long id, Integer quantidade, Produto produto) {
-		super();
 		this.id = id;
 		this.quantidade = quantidade;
 		this.produto = produto;
 	}
-
-
 
 	public Long getId() {
 		return id;
