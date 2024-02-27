@@ -10,10 +10,10 @@ import br.com.rodrigo.AppProdutos.repository.ProdutoRepository;
 import br.com.rodrigo.AppProdutos.service.interfaces.ProdutoServiceInterface;
 
 @Service
-public class ProdutoService implements ProdutoServiceInterface{
+public class ProdutoService implements ProdutoServiceInterface {
 
 	private ProdutoRepository produtoRepository;
-
+	
 	@Autowired
 	public ProdutoService(ProdutoRepository produtoRepository) {
 		this.produtoRepository = produtoRepository;
@@ -21,19 +21,16 @@ public class ProdutoService implements ProdutoServiceInterface{
 	
 	@Override
 	public Produto save(Produto produto) {
-		// TODO Auto-generated method stub
 		return produtoRepository.save(produto);
 	}
 
 	@Override
 	public Optional<Produto> getById(Long id) {
-		// TODO Auto-generated method stub
 		return produtoRepository.findById(id);
 	}
 
 	@Override
 	public List<Produto> getAll() {
-		// TODO Auto-generated method stub
 		return produtoRepository.findAll();
 	}
 
@@ -41,18 +38,20 @@ public class ProdutoService implements ProdutoServiceInterface{
 	public Produto update(Produto produto) {
 		Optional<Produto> findProduto = produtoRepository.findById(produto.getId());
 		
+		//se ele existir, vou atualizar:
 		if(findProduto.isPresent()) {
-			Produto updateProduto = findProduto.get();
+			Produto updateProduto = findProduto.get(); //setId
 			updateProduto.setCodigoBarras(produto.getCodigoBarras());
 			updateProduto.setNome(produto.getNome());
 			updateProduto.setPreco(produto.getPreco());
 			return produtoRepository.save(updateProduto);
 		}
-		return produto;
+		return produto;		
 	}
 
 	@Override
 	public void delete(Long id) {
-		produtoRepository.deleteById(id);
-	}	
+		produtoRepository.deleteById(id);		
+	}
+	
 }

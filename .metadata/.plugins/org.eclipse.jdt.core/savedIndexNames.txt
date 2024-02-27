@@ -44,11 +44,11 @@ INDEX VERSION 1.134+C:\Users\Rodrigo\eclipse-workspace\JavaItauEstudos\.metadata
 2742304830.index
 1817427355.index
 2438798855.index
-2060952251.index
 3089388366.index
+2060952251.index
 206085511.index
-279316001.index
 1428933218.index
+279316001.index
 2390475551.index
 1983892828.index
 1946689642.index

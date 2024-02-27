@@ -1,9 +1,0 @@
-package br.com.rss;
-
-public class AppTeste {
-	
-	@Test
-	public void shouldAnswerWithTrue() {
-		
-	}
-}

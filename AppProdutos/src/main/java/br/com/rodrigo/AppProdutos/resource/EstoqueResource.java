@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.rodrigo.AppProdutos.model.Estoque;
+import br.com.rodrigo.AppProdutos.model.Produto;
 import br.com.rodrigo.AppProdutos.service.EstoqueService;
 
 @RestController
-@RequestMapping("/api/estoque") //http://localhost:8081/api/estoque
+@RequestMapping("/api/estoque") //http://localhost:8080/api/estoque
 public class EstoqueResource {
 	
 	private EstoqueService estoqueService;
@@ -29,7 +30,7 @@ public class EstoqueResource {
 		this.estoqueService = estoqueService;
 	}
 	
-	@PostMapping //http://localhost:8081/api/estoque 
+	@PostMapping //http://localhost:8080/api/estoque 
 	public ResponseEntity<Estoque> save(@RequestBody Estoque estoque){
 		Estoque newEstoque = estoqueService.save(estoque);
 		if(newEstoque == null)
@@ -65,6 +66,32 @@ public class EstoqueResource {
 	public ResponseEntity<?> delete(@PathVariable Long id){
 		estoqueService.delete(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+	
+	@PostMapping("/addQuantidade/{qte}")
+	public ResponseEntity<Estoque> addQuantidade(@RequestBody Produto produto, 
+			@PathVariable int qte){
+		Estoque findEstoque = estoqueService.addQuantidade(produto, qte);
+		if(findEstoque == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(findEstoque);
+	}
+	
+	@PostMapping("/delQuantidade/{qte}")
+	public ResponseEntity<Estoque> dellQuantidade(@RequestBody Produto produto, 
+			@PathVariable int qte){
+		Estoque findEstoque = estoqueService.delQuantidade(produto, qte);
+		if(findEstoque == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(findEstoque);
+	}
+	
+	@GetMapping("/findEstoqueQuantidade/{qte}")
+	public ResponseEntity<List<Estoque>> findEstoqueQuantidade(@PathVariable Integer qte){
+		List<Estoque> listEstoque = estoqueService.findEstoqueQuantidade(qte);
+		if(listEstoque == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(listEstoque);
 	}
 
 }
