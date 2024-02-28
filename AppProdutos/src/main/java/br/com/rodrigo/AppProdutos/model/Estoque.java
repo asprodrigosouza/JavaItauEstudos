@@ -75,6 +75,4 @@ public class Estoque {
 		Estoque other = (Estoque) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 }

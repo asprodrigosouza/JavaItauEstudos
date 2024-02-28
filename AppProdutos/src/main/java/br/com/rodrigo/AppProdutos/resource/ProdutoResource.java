@@ -67,5 +67,4 @@ public class ProdutoResource {
 		produtoService.delete(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT); //status code 204
 	}
-	
 }

@@ -1,8 +1,0 @@
-package br.com.rodrigo.AppProdutos.model;
-
-public class Produto {
-	private Long id;
-	private String codigoBarras;
-	private String nome;
-	private String preco;
-}

@@ -1,5 +1,0 @@
-package br.com.rodrigo.CalculadorSpring.resource;
-
-public class WebController {
-
-}

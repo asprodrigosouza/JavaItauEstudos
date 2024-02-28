@@ -53,5 +53,4 @@ public class ProdutoService implements ProdutoServiceInterface {
 	public void delete(Long id) {
 		produtoRepository.deleteById(id);		
 	}
-	
 }

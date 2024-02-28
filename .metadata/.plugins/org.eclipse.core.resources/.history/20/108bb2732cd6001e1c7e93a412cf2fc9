@@ -1,0 +1,11 @@
+server.port=8081
+
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2-console
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#spring.jpa.show-sql=true
+
+#Postgres SQL
+spring.datasource.url: jdbc:postgressql://localhost:5432/itau
+spring.datasource.username: admin
+spring.datasource.password: admin

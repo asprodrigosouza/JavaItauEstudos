@@ -90,5 +90,4 @@ public class Produto {
 				           "Nome = " + this.nome + ", Preco = " + this.preco + "]";
 		return resposta;
 	}
-	
 }
