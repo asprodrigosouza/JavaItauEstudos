@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.rodrigo.AppProdutos.dto.ProdutoDTO;
+import br.com.rodrigo.AppProdutos.dto.ProdutoSimplesDTO;
 import br.com.rodrigo.AppProdutos.model.Produto;
 import br.com.rodrigo.AppProdutos.service.ProdutoService;
 
@@ -67,4 +69,22 @@ public class ProdutoResource {
 		produtoService.delete(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT); //status code 204
 	}
+	
+	@GetMapping("/findProdutosAndQuantidade")
+	public ResponseEntity<List<ProdutoDTO>> findProdutosAndQuantidade(){
+		List<ProdutoDTO> listProdutoDTO = produtoService.findProdutosAndQuantidade();
+		if(listProdutoDTO == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(listProdutoDTO);
+	}
+	
+	@GetMapping("/findProdutoSimplesAndQuantidade")
+	public ResponseEntity<List<ProdutoSimplesDTO>> findProdutoSimplesAndQuantidade(){
+		List<ProdutoSimplesDTO> listProdutoSimplesDTO = 
+				produtoService.findProdutoSimplesAndQuantidade();
+		if(listProdutoSimplesDTO == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(listProdutoSimplesDTO);
+	}
+	
 }

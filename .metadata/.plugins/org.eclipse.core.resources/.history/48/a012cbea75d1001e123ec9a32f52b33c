@@ -1,6 +1,0 @@
-package br.com.rodrigo.AppProdutos.service;
-
-@Service
-public class ProdutoService {
-
-}

@@ -1,5 +1,0 @@
-package br.com.rodrigo.AppProdutos.service.interfaces;
-
-public class EstoqueServiceInterface {
-
-}
