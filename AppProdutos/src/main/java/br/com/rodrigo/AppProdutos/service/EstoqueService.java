@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import br.com.rodrigo.AppProdutos.exception.ResourceNotFoundException;
 import br.com.rodrigo.AppProdutos.model.Estoque;
 import br.com.rodrigo.AppProdutos.model.Produto;
 import br.com.rodrigo.AppProdutos.repository.EstoqueRepository;
@@ -80,16 +82,16 @@ public class EstoqueService implements EstoqueServiceInterface {
 				//atualizar o campo quantidade
 				Estoque updateEstoque = findEstoque.get(); //setId
 				updateEstoque.setProduto(findEstoque.get().getProduto()); //evitar de atualizar o produto no estoque				
-				//adiciono a qte que será acrescida no meu bd
+				//adiciono a qte que sera acrescida no meu bd
 				int qteAtualizar = findEstoque.get().getQuantidade() + quantidade;				
 				updateEstoque.setQuantidade(qteAtualizar);
 				//gravar
 				return estoqueRepository.save(updateEstoque);
 			}else {
-				return null;
+				throw new ResourceNotFoundException("[Estoque] Estoque não encontrado para o produto: " + findProduto.get().getId());
 			}
 		}else {
-			return null;
+			throw new ResourceNotFoundException("[Estoque] Produto não encontrado: " + produto.getId());
 		}
 	}
 

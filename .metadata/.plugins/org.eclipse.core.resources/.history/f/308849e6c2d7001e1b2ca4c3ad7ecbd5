@@ -1,0 +1,15 @@
+package br.com.rodrigo.AppProdutos.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfig {
+	@Bean
+	public OpenAPI customOpenAPI() {
+		return new OpenAPI().
+				components(
+						new Components().addSecuritySchemes("basicScheme", 
+								new Security))
+	}
+}

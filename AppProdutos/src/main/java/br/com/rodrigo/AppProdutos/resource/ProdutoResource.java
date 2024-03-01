@@ -1,4 +1,5 @@
 package br.com.rodrigo.AppProdutos.resource;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,7 @@ import br.com.rodrigo.AppProdutos.dto.ProdutoDTO;
 import br.com.rodrigo.AppProdutos.dto.ProdutoSimplesDTO;
 import br.com.rodrigo.AppProdutos.model.Produto;
 import br.com.rodrigo.AppProdutos.service.ProdutoService;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/api/produtos") //http://localhost:8081/api/produtos
@@ -30,6 +32,7 @@ public class ProdutoResource {
 		this.produtoService = produtoService;		
 	}
 	
+	@Operation(summary = "Busca registros de produtos cadastrados")
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAllProdutos(){
 		List<Produto> produtos = produtoService.getAll();

@@ -8,7 +8,7 @@
 		<version>3.1.8</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.rodrigo</groupId>
+	<groupId>br.com.ehmf</groupId>
 	<artifactId>AppProdutos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AppProdutos</name>
@@ -25,12 +25,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<!--
 		<dependency>
 	      <groupId>com.h2database</groupId>
@@ -38,17 +32,28 @@
 	      <scope>runtime</scope>
 	    </dependency> 
 	    -->
-    	<dependency>
+	    <dependency>
 	      <groupId>org.postgresql</groupId>
 	      <artifactId>postgresql</artifactId>
 	      <scope>runtime</scope>
 	    </dependency>
-    	
-		<dependency>
+	    
+	    <dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+	    
+	    <dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

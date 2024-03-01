@@ -1,0 +1,7 @@
+package br.com.rodrigo.AppProdutos.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+	public ResourceNotFoundExeption(String message) {
+		super(message); 
+	}
+}
