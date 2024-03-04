@@ -1,0 +1,13 @@
+package br.com.rodrigo.AppProdutos.configuration;
+
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class JwtTokenFilter extends OncePerRequestFilter {
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse, FilterChain filterChain) throws ServerletException, IOException{
+		filterChain.doFilter(request, response);
+	}
+}
