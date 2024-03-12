@@ -39,7 +39,7 @@ public class ContatoResource {
 		Contato newContato = contatoService.save(contato);
 		if(newContato == null)
 			return ResponseEntity.notFound().build();
-		return ResponseEntity.ok(newContato);		
+		return ResponseEntity.ok(newContato);
 	}
 	
 	@Operation(summary = "Retorna os dados de um contato por id")

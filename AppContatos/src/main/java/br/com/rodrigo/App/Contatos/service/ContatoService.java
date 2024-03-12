@@ -15,9 +15,10 @@ import br.com.rodrigo.App.Contatos.service.interfaces.ContatoServiceInterface;
 @Service
 public class ContatoService implements ContatoServiceInterface{
 	
+	@Autowired
 	private ContatoRepository contatoRepository;
 	
-	//@Autowired
+	@Autowired
 	private PessoaRepository pessoaRepository;
 	
 	@Autowired
@@ -42,11 +43,8 @@ public class ContatoService implements ContatoServiceInterface{
 	
 	@Override
 	public List<Contato> getAllContatosByPessoa(Long id) {
-		if(id != 0) {
-			Optional<Pessoa> findPessoa = pessoaRepository.findById(id);
-				return contatoRepository.findAllContatoByPessoa(findPessoa);
-		}			
-		return null;
+		Optional<Pessoa> findPessoa = pessoaRepository.findById(id);
+		return contatoRepository.findAllContatoByPessoa(findPessoa);
 	}
 	
 	@Override
