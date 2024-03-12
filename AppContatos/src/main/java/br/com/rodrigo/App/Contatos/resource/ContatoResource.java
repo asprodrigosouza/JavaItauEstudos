@@ -20,19 +20,21 @@ import br.com.rodrigo.App.Contatos.model.Pessoa;
 import br.com.rodrigo.App.Contatos.repository.ContatoRepository;
 import br.com.rodrigo.App.Contatos.repository.PessoaRepository;
 import br.com.rodrigo.App.Contatos.service.ContatoService;
+import br.com.rodrigo.App.Contatos.service.PessoaService;
 import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/api/contatos") //http://localhost:8080/api/contatos
 public class ContatoResource {
 	
+	@Autowired
 	private ContatoService contatoService;
 	
 	@Autowired
 	public ContatoResource(ContatoService contatoService) {
 		this.contatoService = contatoService;
 	}
-
+	
 	@Operation(summary = "Salva contato de uma pessoa no banco de dados")
 	@PostMapping
 	public ResponseEntity<Contato> save(@RequestBody Contato contato){
@@ -53,7 +55,7 @@ public class ContatoResource {
 	
 
 	@Operation(summary = "Retorna todos os contatos de uma pessoa")
-	@GetMapping("{id}/pessoas") //http://localhost:8080/api/contatos/1/pessoas
+	@GetMapping("{id}/pessoas")
 	public ResponseEntity<List<Contato>> getAllContatosByPessoa(@PathVariable Long id){
 		List<Contato> contato = contatoService.getAllContatosByPessoa(id);
 		if(contato == null)

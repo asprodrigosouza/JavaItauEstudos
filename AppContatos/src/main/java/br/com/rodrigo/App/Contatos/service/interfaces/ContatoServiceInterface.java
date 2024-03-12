@@ -11,7 +11,6 @@ public interface ContatoServiceInterface {
 	Contato save(Contato contato);
 	//Recuperar 1 contato
 	Optional<Contato> getById(Long id);
-	//	List<Contato> getAll();
 	//Recuperar todos os contatos de uma pessoa
 	List<Contato> getAllContatosByPessoa(Long id);
 	//Atualizar o contato

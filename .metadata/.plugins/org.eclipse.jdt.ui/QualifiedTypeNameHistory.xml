@@ -41,7 +41,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
-    <fullyQualifiedTypeName name="br.com.rodrigo.App.Contatos.service.PessoaService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="br.com.rodrigo.App.Contatos.service.ContatoService"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="br.com.rodrigo.App.Contatos.repository.PessoaRepository"/>
     <fullyQualifiedTypeName name="br.com.rodrigo.App.Contatos.model.Pessoa"/>
     <fullyQualifiedTypeName name="br.com.rodrigo.App.Contatos.dto.MalaDiretaDTO"/>
+    <fullyQualifiedTypeName name="br.com.rodrigo.App.Contatos.service.PessoaService"/>
 </qualifiedTypeNameHistroy>

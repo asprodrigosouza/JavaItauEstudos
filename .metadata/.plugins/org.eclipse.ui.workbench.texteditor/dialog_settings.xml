@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="@Query(name = &quot;build_pessoa_dto&quot; , nativeQuery=true)"/>
+		<item key="selection" value="@PostMapping"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="@PostMapping"/>
 			<item value="@Query(name = &quot;build_pessoa_dto&quot; , nativeQuery=true)"/>
 			<item value="buildMalaDireta"/>
 			<item value="pessoaService"/>
@@ -15,7 +16,6 @@
 			<item value="pessoa"/>
 			<item value="//&#x09;//Atualizar o pessoa"/>
 			<item value="spring.h2.console.enabled=true"/>
-			<item value="org.springdoc"/>
 		</list>
 		<list key="replacehistory">
 		</list>

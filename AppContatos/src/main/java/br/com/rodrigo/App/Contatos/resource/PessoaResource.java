@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.rodrigo.App.Contatos.dto.MalaDiretaDTO;
+import br.com.rodrigo.App.Contatos.model.Contato;
 import br.com.rodrigo.App.Contatos.model.Pessoa;
+import br.com.rodrigo.App.Contatos.service.ContatoService;
 import br.com.rodrigo.App.Contatos.service.PessoaService;
 import io.swagger.v3.oas.annotations.Operation;
 

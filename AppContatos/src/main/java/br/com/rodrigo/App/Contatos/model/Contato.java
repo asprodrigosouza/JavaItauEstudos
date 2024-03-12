@@ -66,6 +66,14 @@ public class Contato {
 	public void setTipoContato(Integer tipoContato) {
 		this.tipoContato = tipoContato;
 	}
+	
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+	
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
 
 	public String getContato() {
 		return contato;
@@ -90,5 +98,11 @@ public class Contato {
 			return false;
 		Contato other = (Contato) obj;
 		return Objects.equals(id, other.id);
+	}
+	
+	@Override
+	public String toString() {
+		return "Contato [id=" + id + ", tipoContato=" + tipoContato + ", contato=" + contato + ", pessoa=" + pessoa
+				+ "]";
 	}
 }
