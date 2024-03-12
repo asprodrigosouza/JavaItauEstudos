@@ -1,9 +1,0 @@
-package br.com.rodrigo.AppProdutos.configuration;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class JwtTokenUtil {
-	private String secret = "";
-	private long validadeMiliSegundos = 36000000; //1h
-}
