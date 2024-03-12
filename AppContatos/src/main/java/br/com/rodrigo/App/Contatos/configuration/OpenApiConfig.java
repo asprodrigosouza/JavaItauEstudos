@@ -21,9 +21,9 @@ public class OpenApiConfig {
 								new SecurityScheme().type(SecurityScheme.Type.HTTP)
 									.scheme("bearer").bearerFormat("JWT")))
 				.info(new Info()
-						.title("App de contatos das pessoas")
-						.description("Este aplicativo faz controle dos contatos das pessoas "
-								+ "bem como o cadastro de seu respectivo estoque.")
+						.title("App de Agenda(Pessoas - Contatos)" + " - Rodrigo®")
+						.description("Este aplicativo faz controle da agenda das pessoas "
+								+ "bem como o cadastro de seus respectivos contatos.")
 						.contact(new Contact()
 									.name("Rodrigo")
 									.email("rsouzas@minsait.com")
